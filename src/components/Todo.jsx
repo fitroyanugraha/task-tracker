@@ -43,28 +43,26 @@ const Todo = () => {
   }, [todoList]);
 
   return (
-    <div className="bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl">
+    <div className="bg-white place-self-center w-full sm:w-11/12 max-w-md flex flex-col p-4 sm:p-7 min-h-[60vh] sm:min-h-[80vh] rounded-xl">
       {/* ---- title --- */}
 
       <div className="flex items-center mt-7 gap-2">
         <img className="w-8" src={todoIcon} alt="" />
-        <h1 className="text-3xl font-semibold">To-Do List</h1>
+        <h1 className="text-2xl sm:text-3xl font-semibold">To-Do List</h1>
       </div>
 
       {/* ---- input box --- */}
 
-      <div className="flex items-center my-7 bg-gray-200 rounded-full">
+      <div className="flex flex-row sm:flex-row items-center my-7 bg-gray-200 rounded-full gap-2 sm:gap-0">
         <input
           ref={inputRef}
-          className="bg-transparent border-0 outline-none flex-1 h-14 pl-6 pr-2
-        placeholder:text-slate-600"
+          className="flex-1 bg-transparent border-0 outline-none h-14 pl-4 pr-2 sm:pl-6 placeholder:text-slate-600"
           type="text"
           placeholder="Add your task here!"
         />
         <button
           onClick={handleAdd}
-          className="border-none rounded-full
-        bg-orange-600 w-32 h-14 text-white text-lg font-medium cursor-pointer"
+          className="w-full sm:w-32 h-14 bg-orange-600 text-white text-lg font-medium rounded-full"
         >
           ADD +
         </button>
